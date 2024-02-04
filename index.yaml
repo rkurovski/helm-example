@@ -1,0 +1,45 @@
+apiVersion: v1
+entries:
+  dagster:
+  - apiVersion: v2
+    appVersion: 1.6.1
+    created: "2024-02-04T03:05:04.9668761+02:00"
+    dependencies:
+    - condition: dagster-user-deployments.enableSubchart
+      name: dagster-user-deployments
+      repository: ""
+      version: 1.6.1
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami
+      version: 8.1.0
+    - condition: rabbitmq.enabled
+      name: rabbitmq
+      repository: https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami
+      version: 6.16.3
+    - condition: redis.internal
+      name: redis
+      repository: https://raw.githubusercontent.com/bitnami/charts/eb5f9a9513d987b519f0ecd732e7031241c50328/bitnami
+      version: 12.7.4
+    description: The data orchestration platform built for productivity.
+    digest: ced860a5907d24b5b13be99894f23004615cd3548c1ce35e5e37aaaab7d41fc3
+    icon: https://dagster.io/images/brand/logos/dagster-primary-mark.png
+    keywords:
+    - analytics
+    - data-orchestrator
+    - data-pipelines
+    - etl
+    - workflow
+    kubeVersion: '>= 1.18.0-0'
+    maintainers:
+    - email: support@dagsterlabs.com
+      name: Dagster Labs
+      url: https://dagster.io/about
+    name: dagster
+    sources:
+    - https://github.com/dagster-io/dagster/tree/master/helm/dagster
+    type: application
+    urls:
+    - https://rkurovski.github.io/helm-example/dagster-1.6.1.tgz
+    version: 1.6.1
+generated: "2024-02-04T03:05:04.9454091+02:00"
